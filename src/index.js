@@ -5,6 +5,7 @@ import Game from'./game';
 import { send } from './message';
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 let game = null;
 
 app.use(bodyParser.json());
@@ -37,4 +38,4 @@ app.post('/', (req, res) => {
   }
 });
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'));
+app.listen(PORT, () => console.log(`Four! listening on port ${PORT}!`));

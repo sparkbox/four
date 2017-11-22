@@ -1,0 +1,10 @@
+{
+  name: "VP Bot",
+  description: "Slack bot to let us know when we have 4 for VP",
+  repository: "https://github.com/sparkbox/vp-bot",
+  env: {
+    SLACK_API_TOKEN: {
+      description: "Slack Token"
+    },
+  }
+}
