@@ -1,0 +1,19 @@
+# PING Reaction
+POST http://localhost:3001
+Content-Type: application/json
+
+{
+  "event": {
+    "type": "reaction_added",
+    "user": "U024QRTG3",
+    "item": {
+      "type": "message",
+      "channel": "C4KFPE8SH",
+      "ts": "1516657227.000613"
+    },
+    "reaction": "ping",
+    "item_user": "U024R3NSV",
+    "event_ts": "1516660527.000255"
+  }
+}
+  

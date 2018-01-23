@@ -16,7 +16,7 @@ class Game {
     }
 
     return this.players.length === 4;
-  };
+  }
 
   remove(event) {
     const { reaction, item, item_user } = event;
