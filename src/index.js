@@ -19,7 +19,11 @@ app.post('/', (req, res) => {
   const event = req.body.event;
 
   if (event) {
-    if (!game) game = new Game(event.item.ts);
+    if (!game) {
+      console.log('Starting a new game...');
+      game = new Game(event.item.ts);
+      console.log(game);
+    }
 
     if (event.type === 'reaction_added') {
       four = game.add(event);
@@ -27,8 +31,6 @@ app.post('/', (req, res) => {
     if (event.type === 'reaction_removed') {
       game.remove(event);
     }
-
-    console.log(`Players: ${game.players}\n`);
 
     if (four) {
       send(game.players, event.item.channel);

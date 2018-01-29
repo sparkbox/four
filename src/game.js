@@ -1,5 +1,3 @@
-import { send } from './message';
-
 class Game {
   constructor(ts) {
     this.ts = ts;
@@ -15,6 +13,8 @@ class Game {
       }
     }
 
+    console.log(`Players: ${this.players}`);
+
     return this.players.length === 4;
   }
 
@@ -24,6 +24,11 @@ class Game {
     if (reaction === 'ping' && item.ts === this.ts) {
       this.players = this.players.filter(player => player !== item_user);
     }
+  }
+
+  toString() {
+    return `New game started at
+      ${this.ts} with ${this.players.length} players.`;
   }
 }
 
