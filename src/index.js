@@ -5,7 +5,7 @@ import Game from './game';
 import { send } from './message';
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4444;
 let game = null;
 
 app.use(bodyParser.json());
@@ -22,7 +22,7 @@ app.post('/', (req, res) => {
     if (!game) {
       console.log('Starting a new game...');
       game = new Game(event.item.ts);
-      console.log(game);
+      console.log(`${game}`);
     }
 
     if (event.type === 'reaction_added') {
@@ -38,7 +38,7 @@ app.post('/', (req, res) => {
     }
   }
 
-  res.send(200);
+  res.sendStatus(200);
 });
 
 app.listen(PORT, () => console.log(`Four! listening on port ${PORT}!`));

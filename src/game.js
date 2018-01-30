@@ -7,7 +7,7 @@ class Game {
   add(event) {
     const { reaction, item, item_user } = event;
 
-    if (reaction === 'ping' && item.ts === this.ts) {
+    if (item.ts === this.ts) {
       if (!this.players.includes(item_user)) {
         this.players.push(item_user);
       }
@@ -27,8 +27,9 @@ class Game {
   }
 
   toString() {
-    return `New game started at
-      ${this.ts} with ${this.players.length} players.`;
+    return `New game started at ${this.ts} with ${
+      this.players.length
+    } players.`;
   }
 }
 

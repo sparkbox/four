@@ -1,5 +1,6 @@
 # PING Reaction
-POST http://localhost:3001
+# Player 1
+POST http://localhost:4444
 Content-Type: application/json
 
 {
@@ -17,3 +18,81 @@ Content-Type: application/json
   }
 }
   
+# PING Reaction
+# Player 2
+POST http://localhost:4444
+Content-Type: application/json
+
+{
+  "event": {
+    "type": "reaction_added",
+    "user": "U024QRTG3",
+    "item": {
+      "type": "message",
+      "channel": "C4KFPE8SH",
+      "ts": "1516657227.000613"
+    },
+    "reaction": "ping",
+    "item_user": "U024R3ABC",
+    "event_ts": "1516660627.000255"
+  }
+}
+
+# PING Reaction
+# Player 3
+POST http://localhost:4444
+Content-Type: application/json
+
+{
+  "event": {
+    "type": "reaction_added",
+    "user": "U024QRTG3",
+    "item": {
+      "type": "message",
+      "channel": "C4KFPE8SH",
+      "ts": "1516657227.000613"
+    },
+    "reaction": "ping",
+    "item_user": "U024R3HJHS",
+    "event_ts": "1516660627.000255"
+  }
+}
+
+# PING Reaction
+# Player 4
+POST http://localhost:4444
+Content-Type: application/json
+
+{
+  "event": {
+    "type": "reaction_added",
+    "user": "U024QRTG3",
+    "item": {
+      "type": "message",
+      "channel": "C4KFPE8SH",
+      "ts": "1516657227.000613"
+    },
+    "reaction": "ping",
+    "item_user": "U024R3KLI",
+    "event_ts": "1516660627.000255"
+  }
+}
+
+# NONPING Reaction
+POST http://localhost:4444
+Content-Type: application/json
+
+{
+  "event": {
+    "type": "reaction_added",
+    "user": "U024QRTG3",
+    "item": {
+      "type": "message",
+      "channel": "C4KFPE8SH",
+      "ts": "1516657227.000613"
+    },
+    "reaction": "cat",
+    "item_user": "U024R3CAT",
+    "event_ts": "1516660627.000255"
+  }
+}

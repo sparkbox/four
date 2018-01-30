@@ -1,5 +1,5 @@
 {
-  "name": "vp-bot",
+  "name": "four",
   "version": "0.0.1",
   "description": "Slack Bot",
   "main": "index.js",
@@ -10,9 +10,7 @@
     "postinstall": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "Slack"
-  ],
+  "keywords": ["Slack"],
   "author": "Rob Tarr",
   "license": "ISC",
   "dependencies": {
